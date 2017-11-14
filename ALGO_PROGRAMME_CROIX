@@ -1,0 +1,27 @@
+PROGRAMME CROIX
+
+//BUT: Ecrire une croix de la taille demandee et avec le caractere demande.
+//PRINCIPE: Une premiere boucle pour les lignes contient une seconde boucle qui dessine les colonnes de la croix.
+//ENTREE: Une taille et un caractere.
+//SORTIE: Une croix avec le caractere correspondant a la taille entree.
+
+VAR
+	taille,ligne,colonne	:ENTIER
+	moncar					:CAR
+
+DEBUT
+	ECRIRE("Tapez le caractère souhaite")
+	LIRE(moncar)
+	ECRIRE("Tapez la taille de la croix souhaitee")
+	LIRE(taille)
+	POUR ligne DE 1 A taille FAIRE
+		POUR colonne DE 1 A taille FAIRE
+				SI ((colonne = ligne) OU (colonne + ligne = taille + 1)) ALORS
+					ECRIRE(moncar) //Sans retour a la la ligne
+				SINON
+					ECRIRE(' ') //Sans retour a la ligne
+				FINSI
+		FINPOUR
+		ECRIRE("") //Ecrire un retour a la ligne
+	FINPOUR
+FIN
